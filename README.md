@@ -31,6 +31,8 @@ Changed-address routes had a **+9.37 percentage-point** crude late-route gap ver
 
 ## Dashboard
 
+The three screenshots in this section show the Streamlit reference dashboard.
+
 | Page | What it answers |
 |---|---|
 | Executive Overview | How often were arrivals late, how severe were they, and how does the crude comparison change after weighting? |
@@ -48,6 +50,10 @@ Route Performance & Exceptions. Route-level and visit-level outcomes use separat
 ![Distance category counts, late-arrival rates, and labeled signed geodesic distance percentiles.](09_Portfolio_Publication/screenshots/03-distance-data-quality.png)
 
 Distance Deviations & Data Quality. The median paired change is 0.00 geodesic km. Quality flags identify records for review.
+
+## Power BI companion report
+
+The three-page Power BI Desktop companion uses the same approved PostgreSQL outputs. Its 12-table semantic model keeps route and delivery denominators separate, selects published percentiles at one exact scope, and distinguishes bounded review lists from population summaries. The automation workflow validates CSVs, generates TMDL and PBIR definitions, checks schemas and analytical results, and uses a guarded Windows handoff with backup and rollback. The showcase includes a Power BI Executive Overview capture and describes the other two Power BI pages. The PBIP is machine-specific and is not included as a download. The interactive reproduction path below uses Streamlit. [Power BI showcase](09_Portfolio_Publication/power-bi/README.md) · [Power BI QA](09_Portfolio_Publication/power-bi/QA.md) · [Reproduction guide](09_Portfolio_Publication/power-bi/REPRODUCE.md)
 
 ## Run locally
 
@@ -71,7 +77,7 @@ Start from the repository root on Ubuntu WSL2 or a compatible Linux environment.
    .venv/bin/python -m pip check
    ```
 
-   Configure the read-only login's private passfile at `~/.config/p002/pgpass` with mode `0600`. Follow the [credential setup](06_Dashboard/015_Streamlit_Smoke_Runbook.md#configure-the-local-reporting-credential).
+   Configure a private passfile for the read-only reporting login with mode `0600`. Follow the [credential setup](06_Dashboard/015_Streamlit_Smoke_Runbook.md#configure-the-local-reporting-credential).
 4. From the repository root, launch the dashboard.
 
    ```bash
