@@ -5,6 +5,8 @@
 
 *Self-directed, simulated consulting engagement using a publicly available delivery operations dataset.*
 
+**[View the Executive Case Study (PDF)](09_Portfolio_Publication/P002_Last_Mile_Delivery_Executive_Case_Study.pdf)**
+
 ## The Business Challenge
 
 Late deliveries can frustrate customers, disrupt operations, and create uncertainty for dispatch managers.
